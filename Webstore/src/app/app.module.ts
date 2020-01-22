@@ -10,10 +10,20 @@ import { HomeComponent } from './views/pages/home/home.component';
 import { AboutusComponent } from './views/pages/aboutus/aboutus.component';
 import { FaqsComponent } from './views/pages/faqs/faqs.component';
 import { PageNotFoundComponent } from './views/pages/page-not-found/page-not-found.component';
+import { SignupComponent } from './views/pages/signup/signup.component';
+import { LoginComponent } from './views/pages/login/login.component';
+import { ShopComponent } from './views/pages/shop/shop.component';
+import { ContactComponent } from './views/pages/contact/contact.component';
+import { MyaccountComponent } from './views/pages/myaccount/myaccount.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'aboutus',      component: AboutusComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'shop', component: ShopComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'myaccount', component: MyaccountComponent },
   {
     path: 'faqs',
     component: FaqsComponent,
@@ -35,12 +45,20 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutusComponent,
     FaqsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SignupComponent,
+    LoginComponent,
+    ShopComponent,
+    ContactComponent,
+    MyaccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
