@@ -17,6 +17,11 @@ import { ContactComponent } from './views/pages/contact/contact.component';
 import { MyaccountComponent } from './views/pages/myaccount/myaccount.component';
 import { OrdersComponent } from './views/pages/orders/orders.component';
 import { PaymentComponent } from './views/pages/payment/payment.component';
+import { AddressComponent } from './views/pages/address/address.component';
+import { AccountdetailComponent } from './views/pages/accountdetail/accountdetail.component';
+import { BillingComponent } from './views/pages/billing/billing.component';
+import { ShippingComponent } from './views/pages/shipping/shipping.component';
+import { CheckoutComponent } from './views/pages/checkout/checkout.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -26,6 +31,15 @@ const appRoutes: Routes = [
   { path: 'shop', component: ShopComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'myaccount', component: MyaccountComponent },
+  { path: 'orders', component: OrdersComponent},
+  { path: 'address', component: AddressComponent},
+  { path: 'payment', component: PaymentComponent},
+  { path: 'accountdetail', component: AccountdetailComponent},
+  { path: 'billing', component: BillingComponent},
+  { path: 'shipping', component: ShippingComponent},
+  
+
+
   {
     path: 'faqs',
     component: FaqsComponent,
@@ -54,7 +68,12 @@ const appRoutes: Routes = [
     ContactComponent,
     MyaccountComponent,
     OrdersComponent,
-    PaymentComponent
+    PaymentComponent,
+    AddressComponent,
+    AccountdetailComponent,
+    BillingComponent,
+    ShippingComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
