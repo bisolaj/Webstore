@@ -15,6 +15,8 @@ import { LoginComponent } from './views/pages/login/login.component';
 import { ShopComponent } from './views/pages/shop/shop.component';
 import { ContactComponent } from './views/pages/contact/contact.component';
 import { MyaccountComponent } from './views/pages/myaccount/myaccount.component';
+import { OrdersComponent } from './views/pages/orders/orders.component';
+import { PaymentComponent } from './views/pages/payment/payment.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -50,7 +52,9 @@ const appRoutes: Routes = [
     LoginComponent,
     ShopComponent,
     ContactComponent,
-    MyaccountComponent
+    MyaccountComponent,
+    OrdersComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
