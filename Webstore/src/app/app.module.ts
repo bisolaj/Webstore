@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,19 +27,19 @@ import { CheckoutComponent } from './views/pages/checkout/checkout.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'aboutus',      component: AboutusComponent },
+  { path: 'aboutus', component: AboutusComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
   { path: 'shop', component: ShopComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'myaccount', component: MyaccountComponent },
-  { path: 'orders', component: OrdersComponent},
-  { path: 'address', component: AddressComponent},
-  { path: 'payment', component: PaymentComponent},
-  { path: 'accountdetail', component: AccountdetailComponent},
-  { path: 'billing', component: BillingComponent},
-  { path: 'shipping', component: ShippingComponent},
-  
+  { path: 'orders', component: OrdersComponent },
+  { path: 'address', component: AddressComponent },
+  { path: 'payment', component: PaymentComponent },
+  { path: 'accountdetail', component: AccountdetailComponent },
+  { path: 'billing', component: BillingComponent },
+  { path: 'shipping', component: ShippingComponent },
+
 
 
   {
@@ -45,7 +47,8 @@ const appRoutes: Routes = [
     component: FaqsComponent,
     data: { title: 'Heroes List' }
   },
-  { path: '',
+  {
+    path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
@@ -78,6 +81,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
