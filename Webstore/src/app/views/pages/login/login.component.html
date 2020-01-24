@@ -1,43 +1,38 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <h1>Log in</h1>
-        </div>
-    </div>
-    <form>
-      <div class="row">
-        <div class="form-group">
-         
-          <div class="col">
-          <label for="InputEmail">Email address</label>
-        </div>
-          <div class="col">
-           <input type="text" class="form-control" id="InputEmail" aria-describedby="emailHelp">
-        </div>
-      </div>
-    </div>
-        <div class="row">
-      <div class="form-group">
-        <div class="col">
-          <label for="exampleInputPassword1">Password</label>
-        </div>
-        <div class="col">
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-      </div>
-    </div>
-    <div class="row">
-        <div class="form-group form-check">
-          <div class="col">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+<div class="container">
+  <fieldset>
+      <legend>Log In</legend>
+      <form [formGroup]="login" (ngSubmit)="submitForm()">
+        
+          <div class="form-group">
+              <label for="uName">User Name</label>
+              <input type="text" class="form-control" id="uName" formControlName="uName">
+              <small class="text-danger" *ngIf="uName.invalid && uName.touched"> ** User name is invalid. </small>
           </div>
-          <div class="col">
-          <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+            <small class="text-danger" *ngIf="password.invalid && password.touched"> ** Password is invalid. </small>
         </div>
-        <button type="submit" class="btn btn-primary">Log In</button>
-     
-    
+
+        
+          <button type="submit" class="btn btn-primary" [disabled]="login.invalid">Log In</button>
+          <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
+          <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button>
+      </form>
+  </fieldset>
+
+
+  <div>
+      <div>{{login.value | json}}</div>
+      <div> Dirty: {{login.dirty}}</div>
+      <div> Touched: {{login.touched}}</div>
+      <div> Pristine: {{login.pristine}}</div>
+      <div> Valid: {{login.valid}}</div>
+      <div> Name Touched: {{login.get('name').touched}}</div>
+      <div> User Name Dirty: {{login.get('uName').dirty}}</div>
+      <div> Password Valid: {{signup.get('password').valid}}</div>
+  </div>
 </div>
-</div>
-</form>
-</div>
+
+
