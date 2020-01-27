@@ -1,53 +1,60 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-        <h3>Account details</h3>
+<div class="container">
+  <fieldset>
+      <legend>Account Details</legend>
+      <form [formGroup]="accountdetail" (ngSubmit)="submitForm()">
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" formControlName="name">
+              <small class="text-danger" *ngIf="name.invalid && name.touched"> ** Name is invalid. </small>
+          </div>
+          <div class="form-group">
+            <label for="uName">User Name</label>
+            <input type="text" class="form-control" id="uName" formControlName="uName">
+            <small class="text-danger" *ngIf="uName.invalid && uName.touched"> ** User name is invalid. </small>
         </div>
-    </div>
-    <form>
-        <div class="form-row">
-          <div class="form-group col-6">
-            Name:
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" id="inputName">
-          </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="text" class="form-control" id="email" formControlName="email">
+          <small class="text-danger" *ngIf="email.invalid && email.touched"> ** Email address is invalid. </small>
       </div>
-      <div class="form-row">
-        <div class="form-group col-8">
-          Email Address:
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" id="inputName">
-        </div>
-    </div>
-      
-      <div class="row">
-          <div class="form-group col-md-8">
-            <label for="inputPassword">Current Password (leave blank to leave unchanged):</label>
-          </div>
-          <div class="col">
-            <input type="password" class="form-control" id="inputPassword">
-          </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-8">
-              <label for="inputPassword">New Password (leave blank to leave unchanged):</label>
-            </div>
-            <div class="col">
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-          </div>
-        <div class="row">
-          <div class="form-group col-md-8">
-            <label for="inputRPassword">Confirm New Password</label>
-          </div>
-          <div class="col">
-            <input type="password" class="form-control" id="inputRPassword">
-          </div>
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Save Changes</button>
-      </form>
+      <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="hasEmail" formControlName="hasEmail">
+          <label class="form-check-label" for="hasEmail">I don't have an email address</label>
+      </div>
 
+          <div class="form-group">
+            <label for="cpassword">Current Password</label>
+            <input type="password" class="form-control" id="cpassword" formControlName="cpassword">
+            <small class="text-danger" *ngIf="cpasssword.invalid && cpassword.touched"> ** Current password is invalid. </small>
+        </div>
+
+      <div class="form-group">
+        <label for="npassword">New Password</label>
+        <input type="password" class="form-control" id="npassword" formControlName="npassword">
+        <small class="text-danger" *ngIf="npassword.invalid && npassword.touched"> ** New Password is invalid. </small>
+    </div>
+
+    <div class="form-group">
+      <label for="cnpassword">Confirm New Password</label>
+      <input type="password" class="form-control" id="cnpassword" formControlName="cnpassword">
+      <small class="text-danger" *ngIf="cnpassword.invalid && cnpassword.touched"> ** Confirm New Password is invalid. </small>
+  </div>
+     
+          <button type="submit" class="btn btn-primary" [disabled]="shipping.invalid">Save Changes</button>
+          <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
+          <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button>
+      </form>
+  </fieldset>
+
+
+  <div>
+      <div>{{accountdetail.value | json}}</div>
+      <div> Dirty: {{accountdetail.dirty}}</div>
+      <div> Touched: {{accountdetail.touched}}</div>
+      <div> Pristine: {{accountdetail.pristine}}</div>
+      <div> Valid: {{accountdetail.valid}}</div>
+      <div> Name Touched: {{accountdetail.get('name').touched}}</div>
+      <div> User Name Dirty: {{accountdetail.get('uname').dirty}}</div>
+      <div> Password Valid: {{acccountdetail.get('cpasssword').valid}}</div>
+  </div>
 </div>

@@ -6,6 +6,8 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ShippingComponent } from './pages/shipping/shipping.component';
 import { BillingComponent } from './pages/billing/billing.component';
+import { AddpaymentComponent } from './pages/addpayment/addpayment.component';
+import { AccountdetailComponent } from './pages/accountdetail/accountdetail.component';
 
 
 
@@ -14,7 +16,9 @@ import { BillingComponent } from './pages/billing/billing.component';
     SignupComponent,
     LoginComponent,
     ShippingComponent,
-    BillingComponent
+    BillingComponent,
+    AddpaymentComponent,
+    AccountdetailComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +28,8 @@ import { BillingComponent } from './pages/billing/billing.component';
     SignupComponent,
     LoginComponent,
     ShippingComponent,
-    BillingComponent
+    BillingComponent,
+    AccountdetailComponent
   ]
 })
 export class ViewsModule { }

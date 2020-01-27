@@ -1,0 +1,43 @@
+<div class="container">
+    <fieldset>
+        <legend>Payment Card Details</legend>
+        <form [formGroup]="addpayment" (ngSubmit)="submitForm()">
+            <div class="form-group">
+                <label for="cnumber">Card Number</label>
+                <input type="number" class="form-control" id="cnumber" formControlName="cnumber">
+                <small class="text-danger" *ngIf="cnumber.invalid && cnumber.dirty"> ** Card Number is invalid. </small>
+            </div>
+            <div class="form-group">
+                <label for="edate">Expiry Date</label>
+                <input type="date" class="form-control" id="edate" formControlName="edate">
+                <small class="text-danger" *ngIf="edate.invalid && edate.touched"> ** Expiry date is invalid. </small>
+            </div>
+  
+            <div class="form-group">
+              <label for="ccode">Card Code (CVC)</label>
+              <input type="number" class="form-control" id="ccode" formControlName="ccode">
+              <small class="text-danger" *ngIf="ccode.invalid && ccode.touched"> ** Card Code is invalid. </small>
+          </div>
+  
+          
+            <button type="submit" class="btn btn-primary" [disabled]="addpayment.invalid">Add Payment Method</button>
+            <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
+            <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button>
+        </form>
+    </fieldset>
+  
+  
+    <div>
+        <div>{{addpayment.value | json}}</div>
+        <div> Dirty: {{addpayment.dirty}}</div>
+        <div> Touched: {{addpayment.touched}}</div>
+        <div> Pristine: {{addpayment.pristine}}</div>
+        <div> Valid: {{addpayment.valid}}</div>
+        <div> Card Number Touched: {{addpayment.get('cnumber').touched}}</div>
+        <div> Card Expiry Date Dirty: {{addpayment.get('edate').dirty}}</div>
+        <div> Card Code Valid: {{addpayment.get('ccode').valid}}</div>
+    </div>
+  </div>
+  
+  
+  
