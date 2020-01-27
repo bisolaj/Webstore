@@ -12,8 +12,7 @@ import { OrdersComponent } from './views/pages/orders/orders.component';
 import { AddressComponent } from './views/pages/address/address.component';
 import { PaymentComponent } from './views/pages/payment/payment.component';
 import { AccountdetailComponent } from './views/pages/accountdetail/accountdetail.component';
-import { BillingComponent } from './views/pages/billing/billing.component';
-import { ShippingComponent } from './views/pages/shipping/shipping.component';
+import { BillingComponent } from './views/pages/billing/billing.component'; import { ShippingComponent } from './views/pages/shipping/shipping.component';
 import { FaqsComponent } from './views/pages/faqs/faqs.component';
 import { PageNotFoundComponent } from './views/pages/page-not-found/page-not-found.component';
 
@@ -31,7 +30,7 @@ const routes: Routes = [
   { path: 'payment', component: PaymentComponent },
   { path: 'accountdetail', component: AccountdetailComponent },
   { path: 'billing', component: BillingComponent },
-  { path: 'shipping', component: ShippingComponent },
+ { path: 'shipping', component: ShippingComponent },
   {
     path: 'faqs',
     component: FaqsComponent,

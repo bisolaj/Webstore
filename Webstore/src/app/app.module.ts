@@ -19,8 +19,8 @@ import { OrdersComponent } from './views/pages/orders/orders.component';
 import { PaymentComponent } from './views/pages/payment/payment.component';
 import { AddressComponent } from './views/pages/address/address.component';
 import { AccountdetailComponent } from './views/pages/accountdetail/accountdetail.component';
-import { BillingComponent } from './views/pages/billing/billing.component';
-import { ShippingComponent } from './views/pages/shipping/shipping.component';
+// import { BillingComponent } from './views/pages/billing/billing.component';
+// import { ShippingComponent } from './views/pages/shipping/shipping.component';
 import { CheckoutComponent } from './views/pages/checkout/checkout.component';
 import { ViewsModule } from './views/views.module';
 
@@ -41,8 +41,8 @@ import { ViewsModule } from './views/views.module';
     PaymentComponent,
     AddressComponent,
     AccountdetailComponent,
-    BillingComponent,
-    ShippingComponent,
+    // BillingComponent,
+    // ShippingComponent,
     CheckoutComponent
   ],
   imports: [
