@@ -6,4 +6,5 @@ export interface AProduct {
     price: number;
     image: string;
     nameURL: string;
+    quantity: number;
 }

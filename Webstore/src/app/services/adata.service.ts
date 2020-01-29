@@ -6,12 +6,7 @@ import { Observable, of} from 'rxjs';
   providedIn: 'root'
 })
 export class AdataService {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  price: number;
-  image: string;
+  
   products: AProduct[] = [
     {
       id: '1',
@@ -20,7 +15,8 @@ export class AdataService {
       category: 'Cosmetics',
       price: 5.45,
       image: '../../../../assets/aboniki.png',
-      nameURL: 'AbonikiBalm'
+      nameURL: 'AbonikiBalm',
+      quantity:0
     },
     {
       id: '2',
@@ -29,7 +25,8 @@ export class AdataService {
       category: 'Natural Supplement',
       price: 18.75,
       image: '../../../../assets/adom.jpeg',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
     {
       id: '3',
@@ -38,7 +35,8 @@ export class AdataService {
       category: 'Can Foods',
       price: 5.99,
       image: '../../../../assets/cbeef.jpeg',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
     {
       id: '4',
@@ -47,7 +45,8 @@ export class AdataService {
       category: 'Grains',
       price: 9.99,
       image: '../../../../assets/banku.jpeg',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
     {
       id: '5',
@@ -56,7 +55,8 @@ export class AdataService {
       category: 'Can Foods',
       price: 3.25,
       image: '../../../../assets/carnation.jpeg',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
     {
       id: '6',
@@ -65,7 +65,8 @@ export class AdataService {
       category: 'Cooking Oil',
       price: 18.75,
       image: '../../../../assets/hytopoil.png',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
     {
       id: '7',
@@ -74,7 +75,8 @@ export class AdataService {
       category: 'Cooking Oil',
       price: 9.99,
       image: '../../../../assets/cornoil.jpeg',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
     {
       id: '8',
@@ -83,7 +85,8 @@ export class AdataService {
       category: 'Grains',
       price: 2.95,
       image: '../../../../assets/sodium.jpg',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
     {
       id: '9',
@@ -92,7 +95,8 @@ export class AdataService {
       category: 'Beverages',
       price: 17.99,
       image: '../../../../assets/apeti.jpg',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
     {
       id: '10',
@@ -101,7 +105,8 @@ export class AdataService {
       category: 'Candy',
       price: 2.99,
       image: '../../../../assets/dobrova.png',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
     {
       id: '11',
@@ -110,7 +115,8 @@ export class AdataService {
       category: '',
       price: 18.75,
       image: '../../../../assets/aboniki.png',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
   ]
 

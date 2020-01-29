@@ -6,12 +6,7 @@ import { Observable, of} from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  price: number;
-  image: string;
+  
   products: AProduct[] = [
     {
       id: '1',
@@ -20,7 +15,8 @@ export class DataService {
       category: 'Cosmetics',
       price: 5.45,
       image: '../../../../assets/aboniki.png',
-      nameURL: 'AbonikiBalm'
+      nameURL: 'AbonikiBalm',
+      quantity:0
     },
     {
       id: '2',
@@ -29,7 +25,8 @@ export class DataService {
       category: 'Natural Supplement',
       price: 18.75,
       image: '../../../../assets/Adom.jpeg',
-      nameURL: 'AdomKooko'
+      nameURL: 'AdomKooko',
+      quantity:0
     },
     {
       id: '3',
@@ -38,7 +35,8 @@ export class DataService {
       category: 'Can Foods',
       price: 5.99,
       image: '../../../../assets/cbeef.jpeg',
-      nameURL: 'AlAmair'
+      nameURL: 'AlAmair',
+      quantity:0
     },
     {
       id: '4',
@@ -47,7 +45,8 @@ export class DataService {
       category: 'Grains',
       price: 9.99,
       image: '../../../../assets/banku.jpeg',
-      nameURL: 'BankuMix'
+      nameURL: 'BankuMix',
+      quantity:0
     },
     {
       id: '5',
@@ -56,7 +55,8 @@ export class DataService {
       category: 'Can Foods',
       price: 3.25,
       image: '../../../../assets/carnation.jpeg',
-      nameURL: 'Carnation'
+      nameURL: 'Carnation',
+      quantity:0
     },
     {
       id: '6',
@@ -65,7 +65,8 @@ export class DataService {
       category: 'Cooking Oil',
       price: 18.75,
       image: '../../../../assets/hytopoil.jpeg',
-      nameURL: 'Hytop'
+      nameURL: 'Hytop',
+      quantity:0
     },
     {
       id: '7',
@@ -74,7 +75,8 @@ export class DataService {
       category: 'Cooking Oil',
       price: 9.99,
       image: '../../../../assets/cornoil.jpeg',
-      nameURL: 'CornOil'
+      nameURL: 'CornOil',
+      quantity:0
     },
     {
       id: '8',
@@ -83,7 +85,8 @@ export class DataService {
       category: 'Grains',
       price: 2.95,
       image: '../../../../assets/sodium.jpg',
-      nameURL: 'Sodium'
+      nameURL: 'Sodium',
+      quantity:0
     },
     {
       id: '9',
@@ -92,7 +95,8 @@ export class DataService {
       category: 'Beverages',
       price: 17.99,
       image: '../../../../assets/apeti.jpeg',
-      nameURL: 'Apeti'
+      nameURL: 'Apeti',
+      quantity:0
     },
     {
       id: '10',
@@ -101,7 +105,8 @@ export class DataService {
       category: 'Candy',
       price: 2.99,
       image: '../../../../assets/dobrova.jpeg',
-      nameURL: 'Dobrova'
+      nameURL: 'Dobrova',
+      quantity:0
     },
     {
       id: '11',
@@ -110,7 +115,8 @@ export class DataService {
       category: '',
       price: 18.75,
       image: '../../../../assets/ .jpeg',
-      nameURL: ''
+      nameURL: '',
+      quantity:0
     },
   ]
 

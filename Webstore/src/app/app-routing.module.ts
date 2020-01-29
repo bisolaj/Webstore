@@ -17,6 +17,7 @@ import { ShippingComponent } from './views/pages/shipping/shipping.component';
 import { FaqsComponent } from './views/pages/faqs/faqs.component';
 import { PageNotFoundComponent } from './views/pages/page-not-found/page-not-found.component';
 import {PDescriptionComponent} from './views/pdescription/pdescription.component';
+import { CartComponent } from './views/pages/cart/cart.component';
 
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'accountdetail', component: AccountdetailComponent },
   { path: 'billing', component: BillingComponent },
  { path: 'shipping', component: ShippingComponent },
+ { path: 'cart', component: CartComponent },
   {
     path: 'faqs',
     component: FaqsComponent,
@@ -46,6 +48,9 @@ const routes: Routes = [
   {
     path: ':name/:id', component: PDescriptionComponent
 
+  },
+  {
+    path: 'cart', component: CartComponent
   },
   { path: '**', component: PageNotFoundComponent }
 ];

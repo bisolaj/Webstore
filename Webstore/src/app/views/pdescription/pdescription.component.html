@@ -1,8 +1,18 @@
-{{productDesc.id}}  <br>
-{{productDesc.name}} <br>
-{{productDesc.category}} <br>
-{{productDesc.description}}  <br>
-${{productDesc.price}} <br>
-<img src="{{productDesc.image}}">
-<br>
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 40%;">
+                <img src="{{productDesc.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">{{productDesc.category}}</p>
+                    <h5 class="card-title">{{productDesc.name}}</h5>
+                  <p class="card-text">${{productDesc.price}}</p>
+                  <p class="card-text">{{productDesc.description}}</p>
+                  <a href="#" class="btn btn-primary">Add To Cart</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
 

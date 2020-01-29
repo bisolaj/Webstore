@@ -9,6 +9,7 @@ import { BillingComponent } from './pages/billing/billing.component';
 import { AddpaymentComponent } from './pages/addpayment/addpayment.component';
 import { AccountdetailComponent } from './pages/accountdetail/accountdetail.component';
 import { PDescriptionComponent } from './pdescription/pdescription.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 
@@ -20,7 +21,8 @@ import { PDescriptionComponent } from './pdescription/pdescription.component';
     BillingComponent,
     AddpaymentComponent,
     AccountdetailComponent,
-    PDescriptionComponent
+    PDescriptionComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,
