@@ -5,7 +5,7 @@ import { Observable, of} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AdataService {
+export class DataService {
   id: string;
   name: string;
   description: string;
@@ -28,17 +28,17 @@ export class AdataService {
       description: 'Adom Koo Capsules or Liquid : Benefit of product: Relief of constipation, piles, and waist pains cures. Improves eyesight.',
       category: 'Natural Supplement',
       price: 18.75,
-      image: '../../../../assets/adom.jpeg',
-      nameURL: ''
+      image: '../../../../assets/Adom.jpeg',
+      nameURL: 'AdomKooko'
     },
     {
       id: '3',
       name: 'Al Amair Corned Beef',
-      description: 'Al Amair Corned Beef',
+      description: 'Corned Beef',
       category: 'Can Foods',
       price: 5.99,
       image: '../../../../assets/cbeef.jpeg',
-      nameURL: ''
+      nameURL: 'AlAmair'
     },
     {
       id: '4',
@@ -47,16 +47,16 @@ export class AdataService {
       category: 'Grains',
       price: 9.99,
       image: '../../../../assets/banku.jpeg',
-      nameURL: ''
+      nameURL: 'BankuMix'
     },
     {
       id: '5',
       name: 'Carnation Milk',
-      description: 'Carnation Milk',
+      description: 'Evaporated Milk',
       category: 'Can Foods',
       price: 3.25,
       image: '../../../../assets/carnation.jpeg',
-      nameURL: ''
+      nameURL: 'Carnation'
     },
     {
       id: '6',
@@ -64,8 +64,8 @@ export class AdataService {
       description: 'Canola Oil',
       category: 'Cooking Oil',
       price: 18.75,
-      image: '../../../../assets/hytopoil.png',
-      nameURL: ''
+      image: '../../../../assets/hytopoil.jpeg',
+      nameURL: 'Hytop'
     },
     {
       id: '7',
@@ -74,7 +74,7 @@ export class AdataService {
       category: 'Cooking Oil',
       price: 9.99,
       image: '../../../../assets/cornoil.jpeg',
-      nameURL: ''
+      nameURL: 'CornOil'
     },
     {
       id: '8',
@@ -83,7 +83,7 @@ export class AdataService {
       category: 'Grains',
       price: 2.95,
       image: '../../../../assets/sodium.jpg',
-      nameURL: ''
+      nameURL: 'Sodium'
     },
     {
       id: '9',
@@ -91,8 +91,8 @@ export class AdataService {
       description: 'Apeti Syrup is an antihistamine, prescribed for allergic rhinitis. It blocks the action of histamine, which reduces allergy symptoms.',
       category: 'Beverages',
       price: 17.99,
-      image: '../../../../assets/apeti.jpg',
-      nameURL: ''
+      image: '../../../../assets/apeti.jpeg',
+      nameURL: 'Apeti'
     },
     {
       id: '10',
@@ -100,8 +100,8 @@ export class AdataService {
       description: 'Dobrova Strudel Cherry',
       category: 'Candy',
       price: 2.99,
-      image: '../../../../assets/dobrova.png',
-      nameURL: ''
+      image: '../../../../assets/dobrova.jpeg',
+      nameURL: 'Dobrova'
     },
     {
       id: '11',
@@ -109,7 +109,7 @@ export class AdataService {
       description: '',
       category: '',
       price: 18.75,
-      image: '../../../../assets/aboniki.png',
+      image: '../../../../assets/ .jpeg',
       nameURL: ''
     },
   ]

@@ -12,9 +12,11 @@ import { OrdersComponent } from './views/pages/orders/orders.component';
 import { AddressComponent } from './views/pages/address/address.component';
 import { PaymentComponent } from './views/pages/payment/payment.component';
 import { AccountdetailComponent } from './views/pages/accountdetail/accountdetail.component';
-import { BillingComponent } from './views/pages/billing/billing.component'; import { ShippingComponent } from './views/pages/shipping/shipping.component';
+import { BillingComponent } from './views/pages/billing/billing.component';
+import { ShippingComponent } from './views/pages/shipping/shipping.component';
 import { FaqsComponent } from './views/pages/faqs/faqs.component';
 import { PageNotFoundComponent } from './views/pages/page-not-found/page-not-found.component';
+import {PDescriptionComponent} from './views/pdescription/pdescription.component';
 
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
@@ -40,6 +42,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
+  },
+  {
+    path: ':name/:id', component: PDescriptionComponent
+
   },
   { path: '**', component: PageNotFoundComponent }
 ];
