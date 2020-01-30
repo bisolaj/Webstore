@@ -17,5 +17,8 @@ export class ShopComponent implements OnInit {
     this.aProductList = this.aService.getProducts();
 
   }
-
+  
+  addToCart(item) {
+    alert('Under Construction');
+  }
 }

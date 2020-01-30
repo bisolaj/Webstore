@@ -23,6 +23,7 @@ import { AddressComponent } from './views/pages/address/address.component';
 // import { ShippingComponent } from './views/pages/shipping/shipping.component';
 import { CheckoutComponent } from './views/pages/checkout/checkout.component';
 import { ViewsModule } from './views/views.module';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -43,12 +44,13 @@ import { ViewsModule } from './views/views.module';
     //AccountdetailComponent,
     // BillingComponent,
     // ShippingComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
+    
     ViewsModule,
     RouterModule
   ],

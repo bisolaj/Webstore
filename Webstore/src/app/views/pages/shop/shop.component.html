@@ -9,8 +9,6 @@
             <p>BAGO online store carries an assorted inventory of African Foods (Products). Most of our products come from a host of regions in Africa. We carry foods from West, East, North, Central and South Africa.</p>
         </div>
     </div>
-  
-
     <div class="row">
         <div class="col" *ngFor = 'let item of aProductList'>
             <div class="card" style="width: 18rem;">
@@ -23,7 +21,9 @@
 
                   <p class="card-text">${{item.price}}</p>
                   <!-- <app-modal [product] = 'item'></app-modal> -->
-                  <a routerLink="/{{item.nameURL}}/{{item.id}}" class="btn btn-primary">Add to Cart</a>
+                   <a  class="card-link"><app-modaldesc [product]='item'></app-modaldesc></a>
+                  <button type="button" class="btn btn-primary" (click)="addToCart(item)">Add to Cart</button>
+                  <!-- <a routerLink="/{{item.nameURL}}/{{item.id}}" class="btn btn-primary">Add to Cart</a> -->
                 </div>
               </div>
         </div>

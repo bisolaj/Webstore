@@ -10,6 +10,8 @@ import { AddpaymentComponent } from './pages/addpayment/addpayment.component';
 import { AccountdetailComponent } from './pages/accountdetail/accountdetail.component';
 import { PDescriptionComponent } from './pdescription/pdescription.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { ModaldescComponent } from './pages/modaldesc/modaldesc.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -22,18 +24,22 @@ import { CartComponent } from './pages/cart/cart.component';
     AddpaymentComponent,
     AccountdetailComponent,
     PDescriptionComponent,
-    CartComponent
+    CartComponent,
+    ModaldescComponent
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   exports: [
     SignupComponent,
     LoginComponent,
     ShippingComponent,
     BillingComponent,
-    AccountdetailComponent
+    AccountdetailComponent,
+    ModaldescComponent,
+    NgbModule
   ]
 })
 export class ViewsModule { }
