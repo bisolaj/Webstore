@@ -17,13 +17,13 @@
 
         
           <button type="submit" class="btn btn-primary" [disabled]="login.invalid">Log In</button>
-          <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
-          <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button>
+          <!-- <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
+          <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button> -->
       </form>
   </fieldset>
 
 
-  <div>
+  <!-- <div>
       <div>{{login.value | json}}</div>
       <div> Dirty: {{login.dirty}}</div>
       <div> Touched: {{login.touched}}</div>
@@ -32,7 +32,7 @@
       <div> Name Touched: {{login.get('name').touched}}</div>
       <div> User Name Dirty: {{login.get('uName').dirty}}</div>
       <div> Password Valid: {{signup.get('password').valid}}</div>
-  </div>
+  </div> -->
 </div>
 
 

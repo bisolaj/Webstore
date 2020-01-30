@@ -46,13 +46,13 @@
               <label class="form-check-label" for="hasEmail">I don't have an email address</label>
           </div>
           <button type="submit" class="btn btn-primary" [disabled]="signup.invalid">Submit</button>
-          <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
-          <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button>
+          <!-- <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
+          <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button> -->
       </form>
   </fieldset>
 
 
-  <div>
+  <!-- <div>
       <div>{{signup.value | json}}</div>
       <div> Dirty: {{signup.dirty}}</div>
       <div> Touched: {{signup.touched}}</div>
@@ -61,7 +61,7 @@
       <div> Name Touched: {{signup.get('name').touched}}</div>
       <div> User Name Dirty: {{signup.get('uName').dirty}}</div>
       <div> Password Valid: {{signup.get('password').valid}}</div>
-  </div>
+  </div> -->
 </div>
 
 

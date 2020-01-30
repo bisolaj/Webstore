@@ -20,11 +20,42 @@
 <li class="nav-item">
   <a class="nav-link active" routerLink="/contact" routerLinkActive="active">Contact</a>
 </li>
-   <li>
+   <li class="nav-item">
        <a class="nav-link active" routerLink="/faqs" routerLinkActive="active">FAQs</a>
    </li>
-   <li>
-    <a class="nav-link active" routerLink="/cart" routerLinkActive="active">CART</a>
-</li>
    
+<div class="form-inline my-2 my-lg-0">
+  <a id="cart" (click) = "toggleList()"><i class="fa fa-shopping-cart"></i> Cart <span class="badge badge-info">{{cartCount}}</span></a>
+</div>   
  </ul>
+
+
+
+ <div class="container" *ngIf="showList">
+  <div class="shopping-cart">
+      <div class="shopping-cart-header">
+          <i class="fa fa-shopping-cart cart-icon"></i><span class="badge badge-info">{{cartCount}}</span>
+          <div class="shopping-cart-total">
+              <span>Total:</span>
+              <span>${{cartTotal}}</span>
+          </div>
+      </div>
+      <div *ngIf="cartItems.length == 0" class="py-2">
+          No items in your cart!
+      </div>
+      <ul class="shopping-cart-items">
+          <li *ngFor="let item of cartItems">
+              <!-- <img src="assets/test.jpg" alt="Item" /> -->
+              <span class="item-name">{{item.pName}}</span>
+              <span class="item-price">${{item.price}}</span>
+              <span class="item-quantity">{{item.quantity}}</span>
+              <a class="item-remove text-danger"> Remove </a>
+          </li>
+      </ul>
+      <a href="#" class="btn btn-primary btn-block">Checkout</a>
+  </div>
+</div>
+
+
+
+

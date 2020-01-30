@@ -21,13 +21,13 @@
   
           
             <button type="submit" class="btn btn-primary" [disabled]="addpayment.invalid">Add Payment Method</button>
-            <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
-            <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button>
+            <!-- <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
+            <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button> -->
         </form>
     </fieldset>
   
   
-    <div>
+    <!-- <div>
         <div>{{addpayment.value | json}}</div>
         <div> Dirty: {{addpayment.dirty}}</div>
         <div> Touched: {{addpayment.touched}}</div>
@@ -36,7 +36,7 @@
         <div> Card Number Touched: {{addpayment.get('cnumber').touched}}</div>
         <div> Card Expiry Date Dirty: {{addpayment.get('edate').dirty}}</div>
         <div> Card Code Valid: {{addpayment.get('ccode').valid}}</div>
-    </div>
+    </div> -->
   </div>
   
   

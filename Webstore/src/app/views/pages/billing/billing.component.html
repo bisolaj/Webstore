@@ -57,13 +57,13 @@
               <label class="form-check-label" for="hasEmail">I don't have an email address</label>
           </div>
           <button type="submit" class="btn btn-primary" [disabled]="billing.invalid">Save Address</button>
-          <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
-          <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button>
+          <!-- <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
+          <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button> -->
       </form>
   </fieldset>
 
 
-  <div>
+  <!-- <div>
       <div>{{billing.value | json}}</div>
       <div> Dirty: {{billing.dirty}}</div>
       <div> Touched: {{billing.touched}}</div>
@@ -72,7 +72,7 @@
       <div> Name Touched: {{billing.get('name').touched}}</div>
       <div> Address Dirty: {{billing.get('address').dirty}}</div>
       <div> City Valid: {{billing.get('city').valid}}</div>
-  </div>
+  </div> -->
 </div>
 
 
