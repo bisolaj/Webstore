@@ -5,17 +5,18 @@
 <ng-template #content let-modal>
     <div class="modal-header">
       <h4 class="modal-title">{{product?.name}}</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
-      </button>
+      </button> -->
     </div>
     <div class="modal-body">
-    <img src={{product.image}}>
+    <img src={{product.image}} width=150 height=150>
       <p>{{product.category}}</p>
       <p>{{product.description}}</p>
       <p>${{product.price}}</p>
     </div>
     <div class="modal-footer">
+
       <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
     </div>
   </ng-template>

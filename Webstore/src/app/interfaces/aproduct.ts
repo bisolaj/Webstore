@@ -3,7 +3,7 @@ export interface AProduct {
     name: string;
     description: string;
     category: string;
-    price: number;
+    price: string;
     image: string;
     nameURL: string;
     quantity: number;

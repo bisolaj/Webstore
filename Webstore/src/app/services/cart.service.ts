@@ -32,8 +32,11 @@ else {
   this.$cartQuantity.next(this.cartQuantity);
 }
 
+
+
 removeProduct(item,index) {
   this.cartItems.splice(index,1);
+  // let totalPrice = item.quantity * +item.price;
   const totalPrice = item.quantity * +item.price;
   this.cartTotal -= totalPrice;
   this.cartQuantity -= item.quantity;
@@ -41,6 +44,7 @@ removeProduct(item,index) {
   this.$cartItems.next(this.cartItems);  //broadcast the cartItem has changed
   this.$cartTotal.next(this.cartTotal);
   this.$cartQuantity.next(this.cartQuantity);
+  //totalPrice = 0;
 }
 
 }

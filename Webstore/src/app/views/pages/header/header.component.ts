@@ -36,4 +36,18 @@ export class HeaderComponent implements OnInit {
     this.cartService.removeProduct(item,index);
   }
 
+  checkout(){
+    if (this.cartTotal === 0)
+    {
+      alert('NO PRODUCT TO CHECK OUT');
+      //this.cartTotal=0;
+
+    }
+    else 
+    {
+
+    alert('UNDER CONSTRUCTION');
+    }
+  }
+
 }
