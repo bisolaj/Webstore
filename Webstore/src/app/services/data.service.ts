@@ -25,7 +25,7 @@ export class DataService {
       category: 'Natural Supplement',
       price: '19.00',
       image: '../../../../assets/Adom.jpeg',
-      nameURL: '',
+      nameURL: 'adom',
       quantity:0
     },
     {
@@ -35,7 +35,7 @@ export class DataService {
       category: 'Can Foods',
       price: '6.00',
       image: '../../../../assets/cbeef.jpeg',
-      nameURL: '',
+      nameURL: 'cbeef',
       quantity:0
     },
     {
@@ -45,7 +45,7 @@ export class DataService {
       category: 'Grains',
       price: '10.00',
       image: '../../../../assets/banku.jpeg',
-      nameURL: '',
+      nameURL: 'banku',
       quantity:0
     },
     {
@@ -55,7 +55,7 @@ export class DataService {
       category: 'Can Foods',
       price: '3.00',
       image: '../../../../assets/carnation.jpeg',
-      nameURL: '',
+      nameURL: 'carnation',
       quantity:0
     },
     {
@@ -65,7 +65,7 @@ export class DataService {
       category: 'Cooking Oil',
       price: '19.00',
       image: '../../../../assets/hytopoil.jpeg',
-      nameURL: '',
+      nameURL: 'hytopoil',
       quantity:0
     },
     {
@@ -75,7 +75,7 @@ export class DataService {
       category: 'Cooking Oil',
       price: '10.00',
       image: '../../../../assets/cornoil.jpeg',
-      nameURL: '',
+      nameURL: 'cornoil',
       quantity:0
     },
     {
@@ -85,7 +85,7 @@ export class DataService {
       category: 'Grains',
       price: '3.00',
       image: '../../../../assets/sodium.jpg',
-      nameURL: '',
+      nameURL: 'sodium',
       quantity:0
     },
     {
@@ -95,7 +95,7 @@ export class DataService {
       category: 'Beverages',
       price: '18.00',
       image: '../../../../assets/apeti.jpeg',
-      nameURL: '',
+      nameURL: 'apeti',
       quantity:0
     },
     {
@@ -105,11 +105,66 @@ export class DataService {
       category: 'Candy',
       price: '3.00',
       image: '../../../../assets/dobrova.jpeg',
-      nameURL: '',
+      nameURL: 'dobrova',
       quantity:0
     },
     {
       id: '11',
+      name: 'Blue Diamond Naphtalene Balls',
+      description: 'Blue Diamond Naphthalene Balls are made up with high-graded naphthalene and 99% up pure moth balls colored in clean snow white. It brings you protection from silverfish, moths, cockroaches and other dirty pests. You can put Canfor directly with clothing, or leather, or books etc. Blue Diamond Naphthalene Balls can prevent mildew and moth from your living room and toilet.',
+      category: 'Sanitation',
+      price: '12.00',
+      image: '../../../../assets/napth.jpeg',
+      nameURL: 'naphtalene',
+      quantity:0
+    },
+
+    {
+      id: '12',
+      name: 'Maggi Cube Chicken',
+      description: 'Maggi Cube Chicken',
+      category: 'Spices',
+      price: '10.00',
+      image: '../../../../assets/maggi.jpg',
+      nameURL: 'maggi',
+      quantity:0
+    },
+
+    {
+      id: '13',
+      name: 'Attieke Box',
+      description: 'Attiéké (also spelled acheke) is a side dish made from cassava that is a part of the cuisine of Côte d’Ivoire in Africa. The dish is prepared from fermented cassava pulp that has been grated or granulated. Dried attiéké is also prepared, which is similar in texture to couscous. It’s a common and traditional dish in Côte d’Ivoire that originated in the southern part of the country, and methods for its production are well known in Côte d’Ivoire and also in Benin.',
+      category: 'Grains',
+      price: '5.00',
+      image: '../../../../assets/attieke.jpeg',
+      nameURL: '',
+      quantity:0
+    },
+
+    {
+      id: '14',
+      name: 'Al Amir Brown Rice',
+      description: '',
+      category: 'Grain',
+      price: '18.00',
+      image: '../../../../assets/brownrice.jpeg',
+      nameURL: 'brownrice',
+      quantity:0
+    },
+
+    {
+      id: '15',
+      name: 'Nina Egusi Melon',
+      description: '',
+      category: 'Grain',
+      price: '6.00',
+      image: '../../../../assets/ninamelon.jpeg',
+      nameURL: 'ninamelon',
+      quantity:0
+    },
+
+    {
+      id: '16',
       name: '',
       description: '',
       category: '',
@@ -118,6 +173,7 @@ export class DataService {
       nameURL: '',
       quantity:0
     },
+
   ]
 
   constructor() { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { AccountService } from 'src/app/services/account.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 export class LoginComponent implements OnInit {
   login: FormGroup;
   
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private dService: AccountService) { }
  
   get uName() { return this.login.get('uName'); }
   get password() { return this.login.get('password'); }
@@ -24,12 +25,18 @@ export class LoginComponent implements OnInit {
   submitForm() {
     if (this.login.invalid) {
       alert('You must enter all the required data!');
-    }
-    else {
-      alert('Successful');
-      console.log(this.login.value);
       this.login.reset();
+    }
+  }
 
+  logIn(userName: string, password: string) {
+    //we are going to compare password stored in our service
+    if(this.dService.checkDetail(userName,password)) {
+      this.login.reset();
+      alert('Your Logged in');
+    } else {
+      this.login.reset();
+      alert('Please try again');
     }
   }
 
