@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
     else 
     {
 
-    alert('UNDER CONSTRUCTION');
+    alert('YOUR CHECKOUT WAS SUCCESSFUL, THANKS FOR SHOPPING WITH US AND SEE YOU AGAIN!');
     }
   }
 

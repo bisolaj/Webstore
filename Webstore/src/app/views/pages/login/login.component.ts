@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       alert('Your Logged in');
     } else {
       this.login.reset();
-      alert('Please try again');
+      alert('Your login details was not found, please try again or register an account');
     }
   }
 
