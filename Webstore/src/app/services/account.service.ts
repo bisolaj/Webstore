@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Account } from '../interfaces/account';
+import { Account } from '../interfaces/Account';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +37,28 @@ export class AccountService {
 ];
 
   constructor() { }
+
+  checkIfUserExists(userName: string): boolean {
+    //going to search for username
+    //console.log(this.userPasswords.find(x => userName.toLowerCase() === x.userName));
+    let result = false;
+    if (this.userAccounts.find(x => userName.toLowerCase() === x.userName) !== undefined) {
+      result = true;
+    }
+    return result;
+  }
+
+  addUser(userAccount: Account) {
+    //const userAccount : User = {
+      //userName: uN.toLowerCase(),
+      //password: pN
+    //};
+    this.userAccounts.push(userAccount);
+    //only needed for writing to local storage
+    //localStorage.setItem('users',JSON.stringify(this.userAccounts));
+
+}
+
 
   checkDetail(userName: string, password: string): boolean {
     // this.loggedInUser.userName = userName;

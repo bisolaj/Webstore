@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { AccountService } from 'src/app/services/account.service';
+import { Account } from 'src/app/interfaces/Account';
 
 @Component({
   selector: 'app-signup',
@@ -8,7 +10,9 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 })
 export class SignupComponent implements OnInit {
   signup: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }
+
+  
+  constructor(private formBuilder: FormBuilder, private aService: AccountService) { }
 
   get name() { return this.signup.get('name'); }
   get uName() { return this.signup.get('uName'); }
@@ -46,13 +50,44 @@ export class SignupComponent implements OnInit {
       this.email.updateValueAndValidity();
     });
   }
+
+  signUp(nam: string, usName: string, pass: string, confirmPW: string, addr: string, pho: string, em: string) {
+    //check if email is confirm
+    //check is password is the same
+    
+      //check if password is the same
+      if (pass === confirmPW) {
+        //check if the username is taken
+         if (this.aService.checkIfUserExists(usName)) {
+           alert ("User name Already exists")
+         }
+         else {
+           //you send entire oblect to the list
+           let addThisName: Account = {
+            name: nam,
+            userName: usName,
+            password: pass,
+            address: addr,
+            phoneno: pho,
+            email: em
+           }
+           this.aService.addUser(addThisName);
+         }
+
+      } else {
+        alert ("Password does not match")
+      }
+    
+  }
+
+
   submitForm() {
     if (this.signup.invalid) {
-      alert('Hey fix your errors!');
+      alert('You must enter all the required fields!');
     }
     else {
-      alert('Successful');
-      console.log(this.signup.value);
+      alert('Your account was successfully created!');
+      //console.log(this.signup.value);
       this.signup.reset();
 
     }

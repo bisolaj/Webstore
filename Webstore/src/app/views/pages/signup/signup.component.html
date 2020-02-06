@@ -4,48 +4,49 @@
       <form [formGroup]="signup" (ngSubmit)="submitForm()">
           <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" class="form-control" id="fName" formControlName="name">
+              <input #n type="text" class="form-control" id="fName" formControlName="name">
               <small class="text-danger" *ngIf="name.invalid && name.dirty"> ** Name is invalid. </small>
           </div>
           <div class="form-group">
               <label for="uName">User Name</label>
-              <input type="text" class="form-control" id="uName" formControlName="uName">
+              <input #un type="text" class="form-control" id="uName" formControlName="uName">
               <small class="text-danger" *ngIf="uName.invalid && uName.touched"> ** User name is invalid. </small>
           </div>
 
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" formControlName="password">
+            <input #p type="password" class="form-control" id="password" formControlName="password">
             <small class="text-danger" *ngIf="password.invalid && password.touched"> ** Password is invalid. </small>
         </div>
 
         <div class="form-group">
           <label for="rpassword">Retype Password</label>
-          <input type="password" class="form-control" id="rpassword" formControlName="rpassword">
+          <input #rp type="password" class="form-control" id="rpassword" formControlName="rpassword">
           <small class="text-danger" *ngIf="rpassword.invalid && rpassword.touched"> ** Retype Password is invalid. </small>
       </div>
 
       <div class="form-group">
-        <label for="lName">Address</label>
-        <input type="text" class="form-control" id="address" formControlName="address">
+        <label for="address">Address</label>
+        <input #ad type="text" class="form-control" id="address" formControlName="address">
         <small class="text-danger" *ngIf="address.invalid && address.touched"> ** Address is invalid. </small>
     </div>
 
     <div class="form-group">
       <label for="lName">Phone Number</label>
-      <input type="text" class="form-control" id="phoneno" formControlName="phoneno">
+      <input #ph type="text" class="form-control" id="phoneno" formControlName="phoneno">
       <small class="text-danger" *ngIf="phoneno.invalid && phoneno.touched"> ** Phone Number is invalid. </small>
   </div>
           <div class="form-group">
               <label for="mName">Email Address</label>
-              <input type="text" class="form-control" id="email" formControlName="email">
+              <input #em type="text" class="form-control" id="email" formControlName="email">
               <small class="text-danger" *ngIf="email.invalid && email.touched"> ** Email address is invalid. </small>
           </div>
           <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="hasEmail" formControlName="hasEmail">
               <label class="form-check-label" for="hasEmail">I don't have an email address</label>
           </div>
-          <button type="submit" class="btn btn-primary" [disabled]="signup.invalid">Submit</button>
+          
+          <button type="submit" (click)='signUp(n.value,un.value,p.value,rp.value,a.value,ph.value,em.value)' class="btn btn-primary" [disabled]="signup.invalid">Submit</button>
           <!-- <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
           <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button> -->
       </form>
