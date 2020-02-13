@@ -8,9 +8,9 @@
               <small class="text-danger" *ngIf="name.invalid && name.touched"> ** Name is invalid. </small>
           </div>
           <div class="form-group">
-            <label for="uName">User Name</label>
+            <label for="uame">User Name</label>
             <input type="text" class="form-control" id="uName" formControlName="uName">
-            <small class="text-danger" *ngIf="uName.invalid && uName.touched"> ** User name is invalid. </small>
+            <small class="text-danger" *ngIf="uname.invalid && uname.touched"> ** User name is invalid. </small>
         </div>
         <div class="form-group">
           <label for="email">Email Address</label>
@@ -25,7 +25,7 @@
           <div class="form-group">
             <label for="cpassword">Current Password</label>
             <input type="password" class="form-control" id="cpassword" formControlName="cpassword">
-            <small class="text-danger" *ngIf="cpasssword.invalid && cpassword.touched"> ** Current password is invalid. </small>
+            <small class="text-danger" *ngIf="password.invalid && password.touched"> ** Current password is invalid. </small>
         </div>
 
       <div class="form-group">
@@ -40,7 +40,7 @@
       <small class="text-danger" *ngIf="cnpassword.invalid && cnpassword.touched"> ** Confirm New Password is invalid. </small>
   </div>
      
-          <button type="submit" class="btn btn-primary" [disabled]="shipping.invalid">Save Changes</button>
+          <button type="submit" class="btn btn-primary" [disabled]="accountdetail.invalid">Save Changes</button>
           <!-- <button type="button" class="btn btn-secondary" (click)="setValue()">Set Value</button>
           <button type="button" class="btn btn-secondary" (click)="patchValue()">Patch Value</button> -->
       </form>

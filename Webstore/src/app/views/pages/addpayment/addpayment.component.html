@@ -5,18 +5,18 @@
             <div class="form-group">
                 <label for="cnumber">Card Number</label>
                 <input type="number" class="form-control" id="cnumber" formControlName="cnumber">
-                <small class="text-danger" *ngIf="cnumber.invalid && cnumber.dirty"> ** Card Number is invalid. </small>
+                <!-- <small class="text-danger" *ngIf="cnumber.invalid && cnumber.dirty"> ** Card Number is invalid. </small> -->
             </div>
             <div class="form-group">
                 <label for="edate">Expiry Date</label>
-                <input type="date" class="form-control" id="edate" formControlName="edate">
-                <small class="text-danger" *ngIf="edate.invalid && edate.touched"> ** Expiry date is invalid. </small>
+                <input type="date" class="form-control" id="edate" formControlName="edate" name="edate">
+                <!-- <small class="text-danger" *ngIf="edate.invalid && edate.touched"> ** Expiry date is invalid. </small> -->
             </div>
   
             <div class="form-group">
               <label for="ccode">Card Code (CVC)</label>
               <input type="number" class="form-control" id="ccode" formControlName="ccode">
-              <small class="text-danger" *ngIf="ccode.invalid && ccode.touched"> ** Card Code is invalid. </small>
+              <!-- <small class="text-danger" *ngIf="ccode.invalid && ccode.touched"> ** Card Code is invalid. </small> -->
           </div>
   
           
